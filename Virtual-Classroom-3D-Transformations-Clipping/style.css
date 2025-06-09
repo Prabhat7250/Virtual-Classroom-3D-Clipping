@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f4f7ff;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+header {
+  background: #0d47a1;
+  color: #fff;
+  padding: 1.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ffca28;
+}
+
+.hero {
+  height: 100vh;
+  background: url('https://tutorroom.net/wp-content/uploads/2018/08/Dec-17.png') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  color: white;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%; width: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: slideIn 1s ease-in-out forwards;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding-top: 2rem;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+#book-demo {
+  text-align: center;
+  background: url('https://images.unsplash.com/photo-1600195077071-3c9d4b6bab61?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
+  color: white;
+  position: relative;
+}
+
+.overlay-box {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 3rem;
+  border-radius: 12px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.book-btn {
+  background-color: #ffca28;
+  color: #0d47a1;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.book-btn:hover {
+  background-color: #f5b700;
+}
+
+.video-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+#support {
+  background-color: #f9f9f9;
+}
+
+#support img {
+  width: 200px;
+  max-width: 80%;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+}
+
+#support button {
+  padding: 0.8rem 1.8rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #0d47a1;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.social-links {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-links img {
+  width: 32px;
+}
+
+footer {
+  background: #0d47a1;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+@media(max-width: 600px) {
+  .hero h1 { font-size: 2rem; }
+  header { flex-direction: column; }
+}
+
